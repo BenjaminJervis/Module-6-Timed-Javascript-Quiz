@@ -13,7 +13,7 @@
     <div class="scores"><a href="highscores.html">View Highscores</a></div>
 
     <div class="timer">Time: <span id="time">0</span></div>
-
+<!--start screen for quiz-->
     <div class="wrapper">
       <div id="start-screen" class="start">
         <h1>Coding Quiz Challenge</h1>
@@ -22,27 +22,25 @@
           limit. Keep in mind that incorrect answers will penalize your
           score/time by ten seconds!
         </p>
-        <button id="start">Start Quiz</button>
+        <button id="start" class="btn" onclick="startGame()">Start</button>
       </div>
-
+<!--question choices section-->
       <div id="questions" class="hide">
         <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
-        <p><button id="btn0" class="btn btn-dark"></button></p> <!--Here I have created buttons for the user to click-->
-        <p><button id="btn1" class="btn btn-dark"></button></p>
-        <p><button id="btn2" class="btn btn-dark"></button></p>
-        <p><button id="btn3" class="btn btn-dark"></button></p>
-        <hr id="lineBreak" style="display: none" class="mt-4">
-        <p id="answerCheck" style="display: none;"></p>
+          <div id="choices" class="choices"></div> <!--Here I have created my buttons for user choices-->
+          <button id="answer-1" class="btn" onclick="handleAnswerClick(event)"></button>
+          <button id="answer-2" class="btn" onclick="handleAnswerClick(event)"></button>
+          <button id="answer-3" class="btn" onclick="handleAnswerClick(event)"></button>
+          <button id="answer-4" class="btn" onclick="handleAnswerClick(event)"></button>
           </div>
       </div>
-
+<!--This is the end screen-->
       <div id="end-screen" class="hide">
         <h2>All done!</h2>
         <p>Your final score is <span id="final-score"></span>.</p>
         <p>
           Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
+          <button id="submit-highscore" class="btn submit-btn" onclick="handleSubmit()">Submit Score</button>
         </p>
       </div>
 
