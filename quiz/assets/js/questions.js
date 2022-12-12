@@ -1,7 +1,7 @@
 /** 
  * Criteria 
  */
-
+// Here I have set out my criteria for playing the quiz 
 // GIVEN I am taking a code quiz
 // WHEN I click the start button
 // THEN a timer starts and I am presented with a question
@@ -16,7 +16,7 @@
 
 
 
- // Define a set of questions - Here I have created a set of questions that I want the user to answer 
+ // Define a set of questions - Here I have created a set of questions in an array that I want the user to answer 
  var questions = [{
 
 
