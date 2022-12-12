@@ -94,4 +94,25 @@
     },
     
 ];
-console.log(questions)
+
+//Questions print out in the console 
+console.log(questions) 
+
+function shuffleQuestions() {
+    // clone questions
+    var questionsClone = questions;
+    // For each question, shuffle answer order
+    //For loop check through each question 
+    for (var i = 0; i < questionsClone.length; i++) {
+
+        var answersArray = questionsClone[i].answersArray;
+        answersArray.sort(() => {
+            return (Math.floor(Math.random() * 3) - 1);
+        });
+    }
+    // Shuffle question order so that questions appear in a different order each time 
+    questionsClone = questionsClone.sort(() => {
+        return (Math.floor(Math.random() * 3) - 1);
+    });
+    return questionsClone;
+};
