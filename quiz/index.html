@@ -13,35 +13,33 @@
     <div class="scores"><a href="highscores.html">View Highscores</a></div>
 
     <div class="timer">Time: <span id="time">0</span></div>
-<!--start screen for quiz-->
-    <div class="wrapper">
+</div>
+<!--questions section-->
+<div class = "container">
+  <div id = "questions-container">
+
+  </div>
+</div>
+<section> <!--This is the introduction.start screen for the quiz-->
       <div id="start-screen" class="start">
         <h1>Coding Quiz Challenge</h1>
         <p>
           Try to answer the following code-related questions within the time
           limit. Keep in mind that incorrect answers will penalize your
           score/time by ten seconds!
-        </p> <!--Button created to start the quiz-->
-        <button id="start" class="btn" onclick="startGame()">Start</button>
-      </div>
-<!--question choices section-->
-      <div id="question-container" class="hide">
-        <h2 id="question-title"></h2>
-          <div id="choices" class="choices"></div> <!--Here I have created my buttons for user choices-->
-          <button id="answer-1" class="btn" onclick="handleAnswerClick(event)"></button>
-          <button id="answer-2" class="btn" onclick="handleAnswerClick(event)"></button>
-          <button id="answer-3" class="btn" onclick="handleAnswerClick(event)"></button>
-          <button id="answer-4" class="btn" onclick="handleAnswerClick(event)"></button>
-          </div>
-      </div>
+        </p>
+        <button type="button" id="start-quiz-button" class="btn btn-info ml-5 align-center">Start Quiz</button>
+        </div>
+</section>
+      
 <!--This is the end screen-->
       <div id="end-screen" class="hide">
         <h2>All done!</h2>
-        <p>Your final score is <span id="finalScore"></span>/50</p>
+        <p>Your final score is <span id="final-score"></span>.</p>
         <p>
           Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit-highscore" class="btn submit-btn" onclick="handleSubmit()">Submit Score</button>
-        </p> <!--Here I have added a button to submit the high score-->
+          
+        </p>
       </div>
 
       <div id="feedback" class="feedback hide"></div>
